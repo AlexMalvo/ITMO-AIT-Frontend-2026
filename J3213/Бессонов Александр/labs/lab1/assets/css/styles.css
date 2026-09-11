@@ -188,6 +188,61 @@ a:hover {
   line-height: 1.7;
 }
 
+.setup-steps {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(100%, 560px);
+  margin: 0;
+  padding: 0;
+  gap: 0.9rem;
+  list-style: none;
+}
+
+.setup-steps li {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.9rem;
+  color: #aeb3ca;
+}
+
+.setup-steps > li > span {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.85rem;
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.setup-steps strong,
+.setup-steps small {
+  display: block;
+}
+
+.setup-steps strong {
+  margin-bottom: 0.15rem;
+  color: #fff;
+  font-size: 0.96rem;
+}
+
+.setup-steps small {
+  color: #aeb3ca;
+  font-size: 0.82rem;
+}
+
+.setup-steps li.is-active > span {
+  border-color: var(--pulse-primary);
+  color: #222;
+  background: var(--pulse-primary);
+  box-shadow: 0 8px 24px rgba(255, 221, 45, 0.18);
+}
+
 .mini-board {
   position: relative;
   z-index: 1;
